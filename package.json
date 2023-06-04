@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo 'Привет!'",
-    "check": "prettier --check './src/**/*.{html,css,js}'",
-    "format": "prettier --write './src/**/*.{html,css,js}'",
-    "lint": "stylelint './src/**/*.css'",
-    "lintfix": "stylelint './src/**/*.css' --fix",
+    "check": "prettier --check './src/**/*.{pug,scss,html,css,js}'",
+    "format": "prettier --write './src/**/*.{pug,scss,html,css,js}'",
+    "lint": "stylelint './src/**/*.{css,scss}'",
+    "lintfix": "stylelint './src/**/*.{css,scss}' --fix",
     "checkAll": "npm run check && npm run lint",
     "fixAll": "npm run format && npm run lintfix",
     "build": "gulp build",
@@ -19,6 +19,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@prettier/plugin-pug": "^2.5.1",
     "autoprefixer": "^10.4.14",
     "browser-sync": "^2.29.1",
     "cssnano": "^6.0.1",
@@ -28,11 +29,14 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
     "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "html-minifier": "^4.0.0",
     "postcss": "^8.4.23",
     "postcss-combine-media-query": "^1.0.1",
-    "prettier": "^2.8.7",
-    "stylelint": "^15.4.0"
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1",
+    "stylelint": "^15.4.0",
+    "stylelint-config-standard-scss": "^9.0.0"
   },
   "browserslist": [
     "last 5 versions"
