@@ -2,7 +2,14 @@ extends ../layouts/default
 
 block variables
   - var title = "Главная страница";
+  - var pageStylesheet = "/index.css";
 
 block content
-  section.content-section
-    a.link(href="#") VЁRSTKA
+  section.content-section.content-section_type_centered.content-section_bg_blue
+    block section-content 
+      include ../components/card/card.pug
+      +card('https://doka.guide/tools/how-to-test-and-why/images/covers/mobile.svg', 'Hello, I love you!')
+  section.content-section.content-section_type_centered.content-section_bg_pink
+    block section-content 
+      include ../components/list/list.pug
+      +list([{link: 'https://doka.guide', linkText: 'Doka'}, {link: 'https://web-standards.ru/', linkText: 'Веб-стандарты'}])

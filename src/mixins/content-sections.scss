@@ -1,0 +1,6 @@
+@mixin centered-section($block-size, $inline-size) {
+    min-block-size: $block-size;
+    inline-size: $inline-size;
+    display: grid;
+    place-items: center;
+}

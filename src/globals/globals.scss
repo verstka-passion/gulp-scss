@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: $bgc;
+  color: $tc;
+  margin: 0;
+}
+
 h1,
 h2,
 h3,
@@ -25,4 +31,10 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: $tablet-size) {
+  body {
+    background-color: tomato;
+  }
 }

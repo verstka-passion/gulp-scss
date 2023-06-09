@@ -1,0 +1,20 @@
+@import '../../mixins/tooltips.scss';
+
+$type-list : 'success', 'error';
+
+.tooltip {
+  padding: 20px 40px;
+	max-inline-size: 600px;
+	border-radius: 8px;
+	
+	@each $type in $type-list {
+		&_type_#{$type} {
+			@include tooltip($type);
+		}
+	}
+	
+	&_type_common {
+		border: 1px solid black;
+		color: black;
+	}
+}

@@ -1,0 +1,11 @@
+$mixin-types : ('success', 'green', 'white'), 
+('error', 'red', 'white');
+
+@mixin tooltip($tooltip-type) {
+  @each $type, $accent, $color in $mixin-types{
+    @if $tooltip-type == $type {
+      background-color: $accent;
+      color: $color;
+    }
+  }
+}

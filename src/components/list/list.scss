@@ -1,0 +1,20 @@
+@import '../../extends/jusify';
+
+.list {
+  @extend %space-between-section;
+  list-style: none;
+  gap: 20px;
+  li {
+    padding: 20px;
+    border: 1px solid black;
+    background-color: white;
+    a {
+      text-decoration: none;
+      color: steelblue;
+
+      &:hover {
+        color: tomato;
+      }
+    }
+  }
+}
